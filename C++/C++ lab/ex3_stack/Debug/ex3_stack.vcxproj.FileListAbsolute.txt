@@ -1,0 +1,2 @@
+D:\code\ex3_stack\Debug\ex3_stack.exe
+C:\Users\zhang\Desktop\C++ lab\ex3_stack\Debug\ex3_stack.exe

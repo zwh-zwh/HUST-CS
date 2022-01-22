@@ -1,0 +1,15 @@
+INPUT(
+./release\QtTipsDlgView.o
+./release\QtWidgetsFL.o
+./release\QtWidgetsLoc.o
+./release\QtWidgetsQU.o
+./release\fun.o
+./release\main.o
+./release\map.o
+./release\qrc_map.o
+./release\moc_QtTipsDlgView.o
+./release\moc_QtWidgetsFL.o
+./release\moc_QtWidgetsLoc.o
+./release\moc_QtWidgetsQU.o
+./release\moc_map.o
+);

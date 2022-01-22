@@ -1,0 +1,2 @@
+D:\code\Project3\Debug\Project3.exe
+C:\Users\zhang\Desktop\C++ lab\ex1_queue_c\Debug\ex1_queue_c.exe

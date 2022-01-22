@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MAP</class>
+ <widget class="QMainWindow" name="MAP">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1168</width>
+    <height>716</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MAP</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/new/prefix1/map.bmp);</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1168</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件(F)</string>
+    </property>
+    <addaction name="action_open"/>
+    <addaction name="action_cor"/>
+    <addaction name="action_begin_end"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Q">
+    <property name="title">
+     <string>查询(Q)</string>
+    </property>
+    <addaction name="action_mintrans"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_Q"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_open">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>添加地图</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="action_mintrans">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>最少转乘</string>
+   </property>
+  </action>
+  <action name="action_cor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>读入地点</string>
+   </property>
+  </action>
+  <action name="action_begin_end">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>输入起点和终点</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>action_mintrans</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MAP</receiver>
+   <slot>mintrans()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>288</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_open</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MAP</receiver>
+   <slot>loadmap()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>288</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_exit</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MAP</receiver>
+   <slot>closewnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>288</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_begin_end</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MAP</receiver>
+   <slot>beginEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_cor</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MAP</receiver>
+   <slot>loadloc()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>loadmap()</slot>
+  <slot>closewnd()</slot>
+  <slot>mintrans()</slot>
+  <slot>loadloc()</slot>
+  <slot>beginEnd()</slot>
+ </slots>
+</ui>

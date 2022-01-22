@@ -1,0 +1,2 @@
+D:\code\ex4_matrix\Debug\ex4_matrix.exe
+C:\Users\zhang\Desktop\C++ lab\ex4_matrix\Debug\ex4_matrix.exe
